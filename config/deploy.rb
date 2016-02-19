@@ -1,25 +1,26 @@
-lock '3.4.0'
-
 set :application, 'ajmichael.net'
-set :repo_url, 'git@github.com:aj-michael/ajmichael.net.git'
-set :user, 'deploy'
-set :user_sudo, false
-set :deploy_to, '/srv/www/ajmichael.net'
-set :scm, :git
-set :format, :pretty
-set :log_level, :debug
-set :pty, true
+set :repository, '_site'
+set :scm, :none
+set :deploy_via, :copy
+set :copy_compression, :gzip
+set :use_sudo, false
 
 role :web, 'ajmichael.net'
+role :app, 'ajmichael.net'
+
+set :user, 'deploy'
+
+set :deploy_to, '/srv/www/ajmichael.net'
+before 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
-  before :restart, :build_public do
-    on roles(:app) do
-      within release_path do
-        execute '/usr/local/rvm/gems/ruby-2.2.1/wrappers/jekyll', 'build --destination public'
-      end
-    end
+  [:start, :stop, :restart, :finalize_update].each do |t|
+    desc "Ignoring #{t}"
+    task t, :roles => :app do ; end
   end
 
-  after :publishing, :restart
+  desc 'Run jekyll to update site before uploading'
+  task :update_jekyll do
+    %x(rm -rf _site/* && jekyll build)
+  end
 end
