@@ -9,4 +9,4 @@ I study mathematics and stuff like mathematics at Rose-Hulman Institute of Techn
 
 Occasionally I respond to emails at adam@ajmichael.net.
 
-Currently 90% of my time is going to my senior capstone project at Rose-Hulman, [thepathfinder.xyz](https://thepathfinder.xyz).
+I spend a lot of time writing mediocre code on [github](https://github.com/aj-michael). Currently 90% of my time is going to my senior capstone project, [thepathfinder.xyz](https://thepathfinder.xyz).
