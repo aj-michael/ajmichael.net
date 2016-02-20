@@ -1,15 +1,12 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name is Adam Michael. I am 21 years old. I hate building websites, so today is off to a terrible start.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I study mathematics and stuff like mathematics at Rose-Hulman Institute of Technology. On the side I work as a software engineer, currently for Rose-Hulman Ventures. Previously for Quantcast, Google and Microsoft.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Occasionally I respond to emails at adam@ajmichael.net.
+
+Currently 90% of my time is going to my senior capstone project at Rose-Hulman, [thepathfinder.xyz](https://thepathfinder.xyz).
