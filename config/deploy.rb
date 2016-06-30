@@ -1,16 +1,16 @@
-set :application, 'ajmichael.net'
+set :application, 'blog.ajmichael.net'
 set :repository, '_site'
 set :scm, :none
 set :deploy_via, :copy
 set :copy_compression, :gzip
 set :use_sudo, false
 
-role :web, 'ajmichael.net'
-role :app, 'ajmichael.net'
+role :web, 'blog.ajmichael.net'
+role :app, 'blog.ajmichael.net'
 
 set :user, 'deploy'
 
-set :deploy_to, '/srv/www/ajmichael.net'
+set :deploy_to, '/srv/www/blog.ajmichael.net'
 before 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
